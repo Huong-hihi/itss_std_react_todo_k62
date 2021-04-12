@@ -8,8 +8,10 @@ function Input(  { addTodo }  ) {
  const handleKeyUp = (event) => {
     if(event.keyCode === 13){
       addTodo(event.target.value);
+      event.target.value = ""
     }
   }
+  
   return (
     <div className="panel-block">
       <input 
